@@ -22,10 +22,11 @@ public:
 	/**
 	 * @brief Retrieves a specific blueprint subsystem.
 	 * 
-	 * This function allows users to obtain a blueprint subsystem of a specified class from a given game instance.
+	 * This function allows users to obtain a blueprint subsystem of a specified class.
 	 * It is designed to be called from Blueprints, where the output type is determined by the SubsystemClass parameter.
+	 * The WorldContextObject pin is hidden and automatically filled from the calling blueprint.
 	 * 
-	 * @param InGameInstance The game instance from which to get the subsystem.
+	 * @param WorldContextObject Object used to resolve the GameInstance (e.g. self Actor, Widget, GameInstance).
 	 * @param SubsystemClass The class type of the subsystem to retrieve.
 	 * @return A pointer to the UBlueprintSubsystemBase object of the requested class type.
 	 */
